@@ -1,6 +1,7 @@
 const express = require("express");
 const viewRouter = require("./routes/view.router");
 const productsRouter = require("./routes/products.router");
+const authRouter = require("./routes/auth.router.js");
 const handlebars = require("express-handlebars");
 const mongoose = require("mongoose");
 const { PORT, URL_SERVICE } = require("./utils/constanst");
@@ -25,6 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 // routes
 app.use("/", viewRouter);
 app.use("/api/products", productsRouter);
+app.use("/api/auth", authRouter);
 
 
 

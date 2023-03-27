@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
             payload: 'Error al obtener los productos'
         });
     }
-});
+}); 
 
 
 // use middleware multer para ingresar imagen mediante un archivo
